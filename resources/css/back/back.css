@@ -1,0 +1,771 @@
+:root{
+    --background: #cfd5ec;
+    --backgroundTwo:rgba(10, 21, 42, 0.74);
+    --backgroundThree: #0aa942;
+    --backgroundFour:#5F6B84;
+    --backgroundFive:rgb(47 59 84);
+    --textOne:#000;
+    --textTwo:#00ff5e;
+    --textThree:#7d849a;
+}
+body {
+    background: var(--background);
+}
+
+.darkMode{
+    background: rgb(36 35 38) !important;
+}
+.darkMode .setting{
+    background: rgb(64 77 103 / 78%);;
+}
+.darkMode .profile{
+    background: rgb(47 59 84) !important;
+}
+.darkMode  p, .darkMode h1, .darkMode h2, .darkMode h3, .darkMode h5, .darkMode a, .darkMode td{
+    color: var(--background) !important;
+}
+.darkMode .text-light{
+    color: var(--backgroundThree) !important;
+}
+.darkMode .left-menu{
+    box-shadow: 0px 0px 10px 0px #000;
+}
+.darkMode .side-nav{
+    background: var(--backgroundTwo);
+}
+
+
+
+a{
+    text-decoration: none !important;
+}
+li{
+    list-style: none !important;
+}
+
+.right-menu{
+    width: calc(100% - 260px);
+    position: absolute;
+    right: 0px;
+}
+.left-menu{
+    position: fixed;
+    width: 260px;
+    height: 100vh;
+    background:var(--background);
+    box-shadow: 1px 1px 10px 1px #6E6E6E;
+    z-index: 1;
+}
+.left-menu .logo{
+    position: relative;
+    padding: 0px 0px 20px 0;
+    background: var(--backgroundFour);
+}
+
+.left-menu .logo a{
+    color: var(--background);
+    text-decoration: none;
+
+}
+.left-menu .logo a::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--background);
+    border-radius: 50%;
+    top: 24px;
+    left: 48px;
+}
+.left-menu .logo a::after{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--backgroundThree);
+    border-radius: 50%;
+    top: 24px;
+    left: 58px;
+}
+
+.logo a .text-primary{
+    color: var(--textTwo) !important;
+}
+
+ .text-light{
+    color: var(--backgroundThree)  !important;
+    cursor:context-menu;
+    font-size: 12px;
+    letter-spacing: 1.2px;
+}
+.darkMode .side-nav{
+    height: 92vh;
+
+}
+.side-nav{
+    background: var(--background);
+    height: 90vh;
+    padding: 20px 0 0 0;
+    overflow-y: scroll;
+    z-index: 1;
+}
+
+
+.side-nav .action{
+    color:var(--textOne);
+    font-size: 16px;
+    letter-spacing: 1.1px;
+}
+.side-nav .action i{
+    padding-right: 5px;
+    font-size: 13px;
+    color: var(--backgroundThree);
+}
+.side-nav .dashboardList li{
+    padding: 10px 0;
+}
+.side-nav .dashboardList li a{
+    color: var(--textOne);
+    font-size: 16px;
+    letter-spacing: 1.1px;
+    margin-left: -5.8px;
+}
+
+::-webkit-scrollbar {
+
+    width: 0.5rem;
+
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: 0px 0px 0px 0px;
+
+}
+
+.darkMode .side-nav::-webkit-scrollbar-thumb {
+    background-color: var(--background);
+    outline: 1px solid slategrey;
+    z-index: 22;
+}
+.darkMode::-webkit-scrollbar-thumb {
+    background-color: var(--background);
+    outline: 1px solid slategrey;
+    z-index: 22;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--backgroundTwo);
+    outline: 1px solid slategrey;
+    z-index: 22;
+}
+
+
+.dashboardDefault{
+    padding: 20px;
+}
+
+
+.card .text-primary{
+    background: var(--backgroundThree);
+    height: 40px;
+    width: 40px;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card .text-primary i{
+    color: var(--background) !important;
+    font-size: 20px;
+}
+
+
+.profile{
+    margin: 10px 5px 10px 5px;
+    position: relative;
+    list-style: none;
+    background: rgba(255, 252, 252, 0.5);
+    border-radius: 10px;
+}
+
+.profile input, .profile textarea, .profile span{
+    margin: 10px 0;
+}
+.profile .price_product{
+    margin-top: 40px !important;
+}
+
+/*===============================   collapsible while boostrap not working==============================*/
+
+.collapsible {
+
+}
+.active_collapse{
+    color: var(--backgroundThree) !important;
+}
+
+
+.content_text{
+    display: none;
+    -webkit-transition-delay: 0.5s;
+    transition-delay: 0.5s;
+    transition:all 0.4s ease-out;
+    opacity: 0;
+}
+
+.content_text.show{
+    opacity: 1;
+}
+
+
+
+
+
+/*===============================   collapsible while boostrap not working end==============================*/
+
+
+.header{
+    background: rgb(64 77 103 / 78%);
+    padding: 10px;
+    backdrop-filter: blur(8px);
+    position: sticky;
+    z-index: 1;
+    top: 72px;
+}
+.header .container{
+    position:relative;
+}
+.header h3{
+    color: var(--background);
+}
+
+
+
+.header .add a{
+    background: var(--background);
+    padding: 10px 15px;
+    color: var(--backgroundThree) ;
+    position: absolute;
+    right: 0px;
+    top: 10px;
+    border-radius: 5px;
+    font-weight: 600;
+    line-height: 25px;
+    font-size: 18px;
+    transition: 0.3s ease-out;
+}
+.header .add a:hover{
+    background: var(--backgroundThree);
+    color: var(--background);
+}
+.darkMode .add a{
+    background: var(--backgroundThree);
+    color: var(--background);
+}
+
+.darkMode .add a:hover{
+    background: var(--backgroundFive);
+    color: var(--backgroundThree) !important;
+}
+
+
+
+/*============navigation bar ===========*/
+
+.navigation-bar{
+    background: rgb(64 77 103 / 78%);
+    padding: 10px;
+    backdrop-filter: blur(8px);
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    padding: 14px;
+}
+
+.navigation-bar form input{
+    border: 0px;
+    border-radius: 5px;
+    padding: 2px;
+    margin: 0 2px;
+}
+.navigation-bar form input::placeholder{
+    padding: 0 20px;
+}
+.navigation-bar form button{
+    border: 0px;
+    border-radius: 5px;
+    padding: 2px;
+    margin: 0 2px;
+
+}
+.navigation-bar .navigation{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0px;
+}
+.navigation-bar .navigation li{
+    padding: 5px 8px;
+    margin-right: 12px;
+    cursor: pointer;
+}
+.navigation-bar .navigation li a i{
+    color: var(--background);
+    font-size: 20px;
+}
+.navigation-bar .text h3, .text p{
+    color: var(--background);
+    padding-left: 20px;
+}
+.textP{
+    font-size: 15px;
+}
+
+
+
+
+
+/*======= for setting of navbar==== */
+.gearIcon i{
+    color: var(--background) !important;
+    font-size: 20px;
+
+}
+.setting{
+    position: fixed;
+    right: 0px;
+    top: -10px;
+    height: 110vh;
+    background: var(--background);
+    width: 220px;
+    box-shadow: 0px 0px 17px 3px  var(--backgroundTwo);
+    transform: translateX(110%);
+    transition: 0.3s ease;
+    z-index: 100;
+    overflow-y: auto;
+}
+.setting .head{
+    background: var(--backgroundFour);
+    padding: 12px 10px;
+    position: relative;
+}
+.setting .head:after{
+    content:'';
+    position:absolute;
+    left: 0px;
+    bottom: 0px;
+    background: #fff;
+    width: 100%;
+    height: 1px;
+
+}
+
+.setting .head i{
+    font-size: 20px;
+    padding: 15px;
+    margin-bottom: -10px;
+    color:var(--background);
+    cursor: pointer;
+
+}
+.setting .head p{
+    color: var(--background);
+    margin: 0 10px;
+    margin-bottom: -10px;
+    margin-left: 40px;
+    font-size: 16px !important;
+
+ }
+.setting p .text-primary{
+    color: var(--textTwo) !important;
+}
+.setting .box p{
+    padding: 0 14px;
+    margin: 0px;
+}
+
+
+
+
+
+.setting .circle{
+    width: 56px;
+    height: 56px;
+    background: var(--textThree);
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.setting .name{
+    margin-bottom: -5px;
+}
+.setting .name h5{
+    font-size: 16px;
+    color: var(--textOne);
+}
+
+.setting .profile .alert-profile {
+    margin: 0px;
+    padding: 0px;
+}
+.setting .profile .alert-profile li{
+    position: relative;
+    padding: 10px 10px;
+}
+.setting .profile .alert-profile li:not(:last-child):after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0.3px;
+    bottom: 0px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.21);
+}
+.setting .profile .alert-profile li p{
+    color: var(--textOne);
+    font-size: 16px;
+    margin: 0px auto;
+    padding: 0 10px;
+    font-weight: 500;
+}
+.setting .profile .alert-profile li a{
+    color: var(--textOne);
+    font-weight: 500;
+}
+.setting .profile .alert-profile li .miniText{
+    font-size: 12px;
+    color: #6E6E6E;
+    padding-left: 30px;
+    padding-top: -10px;
+    margin: 0px;
+
+}
+.setting .profile .alert-profile li a i{
+    margin: 0 10px 0 0;
+    color: var(--backgroundThree);
+}
+.logout{
+    position: absolute;
+    bottom :0px
+}
+
+
+.content{
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100%;
+    -webkit-backdrop-filter: blur(5px) brightness(0.7);
+    backdrop-filter: blur(5px) brightness(0.7);
+    transform: translateX(100%);
+    z-index: 99;
+}
+.setting-toggle{
+    transform: translateX(0%);
+}
+
+.tox.tox-tinymce{
+    z-index: 0;
+}
+
+
+/*==============category============*/
+
+thead{
+    background: var(--backgroundThree);
+
+}
+thead tr th{
+    color: var(--background);
+}
+.darkMode  tbody th{
+    color: var(--background);
+    text-align: center;
+}
+.darkMode tbody td .text-success{
+    color: #0aa942 !important;
+}
+
+.small{
+    font-size: 12px ;
+    text-align: left;
+}
+
+.darkMode .img{
+    background: var(--backgroundFive) !important;
+}
+
+/*====add category===*/
+.darkMode label{
+    color: var(--background);
+}
+
+.darkMode .profile input{
+    color: #000 !important;
+}
+
+
+
+.bootstrap-select.btn-group .dropdown-menu li a:hover {
+    color: whitesmoke !important;
+    background: #bf5279 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.cancels{
+    display: none;
+}
+@media (max-width: 992px){
+    .left-menu{
+        transform: translateX(-110%);
+        position: fixed;
+        z-index: 100;
+    }
+
+    .cancelIcon i.cancels{
+        color: var(--background);
+        position: absolute;
+        top:13px;
+        right: 10px;
+        text-align: right;
+        font-size: 25px;
+        cursor: pointer;
+        display: block;
+    }
+
+    .right-menu{
+        width: 100% !important;
+        position: absolute;
+    }
+
+     .navigation-bar  .hamburger{
+        position: relative;
+         margin: 11px 0px 0px 0px;
+         height: 33px;
+         width: 33px;
+    }
+    .navigation-bar .lines{
+        position: relative;
+        margin: 4px;
+        width: 33px;
+        height: 3px;
+        left: 0px;
+        top: 9px;
+        background-color: var(--background);
+
+    }
+    .navigation-bar  .lines::before{
+        content: " ";
+        position: absolute;
+        width: 33px;
+        height: 3px;
+        background-color: var(--background);
+        top: -8px;
+        left: 0;
+        transition: 0.3s;
+    }
+    .navigation-bar  .lines::after{
+        content: " ";
+        width: 33px;
+        position: absolute;
+        top: 8px;
+        height: 3px;
+        background-color: var(--background);
+       left: 0;
+        transition: 0.3s;
+    }
+
+    .navigation-bar  .hamburger:hover{
+        cursor: pointer !important;
+    }
+    .content-nav{
+        position: fixed;
+        left: 0px;
+        top: 0;
+        height: 100vh;
+        width: 100%;
+        -webkit-backdrop-filter: blur(3px) brightness(0.7);
+        backdrop-filter: blur(5px) brightness(0.7);
+        background: rgba(0,0,0,0.2);
+        transform: translateX(-100%);
+        z-index: 99;
+    }
+
+
+    .menu-toggle{
+        transform: translateX(0%);
+    }
+
+
+}
+
+@media (max-width: 768px ){
+    .hams{
+        position: absolute;
+        bottom: 0px;
+    }
+
+    .search form input{
+        width: 100%;
+
+    }
+    .col-sm-12 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+    .header{
+
+        top: 112px;
+    }
+
+}
+
+
+
+.jvm-container{
+    height:100%;
+    overflow:hidden;
+    position:relative;
+    touch-action:none;
+    width:100%
+}
+.jvm-zoom-btn{
+    background-color:#292929;
+    border-radius:3px;
+    box-sizing:border-box;
+    color:#fff;
+    cursor:pointer;
+    height:15px;
+    left:10px;
+    line-height: 7px;
+    padding: 2px;
+    position:absolute;
+    width:15px
+}
+.jvm-zoom-btn.jvm-zoomout{
+    top:30px
+}
+.jvm-zoom-btn.jvm-zoomin{
+    top:10px
+}
+
+
+.jvm-region{
+    fill: var(--backgroundThree);
+}
+.flatpickr-months{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 30px 0;
+}
+.flatpickr-current-month{
+    display: flex;
+    justify-content: center;
+}
+.flatpickr-monthDropdown-months{
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none
+}
+
+.flatpickr-month select, .flatpickr-month input{
+    border: 0px;
+    width: 90%;
+    background: transparent;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    outline: none;
+}
+.flatpickr-monthDropdown-month{
+    text-align: center;
+    margin-left: -10px;
+}
+.flatpickr-weekdays{
+    align-items:center;
+    background:transparent;
+    display:flex;
+    height:28px;
+    overflow:hidden;
+    text-align:center;
+    width:100%;
+    margin-bottom: 26px;
+}
+.flatpickr-weekdaycontainer:after{
+    content: '';
+    position: absolute;
+    top: 163px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: rgba(0,0,0,0.41);
+}
+.flatpickr-weekdays .flatpickr-weekdaycontainer{
+    display:flex;
+    flex:1
+}
+span.flatpickr-weekday{
+    background:transparent;
+    color:rgba(0,0,0,.54);
+    cursor:default;
+    display:block;
+    flex:1;
+    font-size:90%;
+    font-weight:bolder;
+    line-height:1;
+    margin:0;
+    text-align:center
+}
+.prevMonthDay,.nextMonthDay{
+    color: rgba(0, 0, 0, 0.41);
+}
+
+.flatpickr-day{
+    cursor:pointer;
+    display:inline-block;
+    flex-basis:14.2857143%;
+    font-weight:400;
+    height:38px;
+    justify-content:center;
+    max-width:50px;
+    position:relative;
+    text-align:center;
+    width: 14.285714%;
+}
+.today{
+    color: var(--background);
+    position: relative;
+    z-index: 1;
+}
+.today:before{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    right: 8px;
+    height: 30px;
+    width: 30px;
+    bottom: 10px;
+    border-radius: 5px;
+    background: var(--backgroundThree);
+    z-index: -1;
+}
+
+
+
+.darkMode .flatpickr-day,.darkMode .flatpickr-weekday, .darkMode .flatpickr-months, .darkMode .flatpickr-monthDropdown-months, .darkMode input{
+    color: var(--background) !important;
+}
+.darkMode .prevMonthDay,.darkMode .nextMonthDay{
+    color: var(--textThree) !important;
+}
